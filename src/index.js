@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
+import ChatBotAPI from './chat-bot-api';
 
 class Review extends React.Component {
   constructor(props) {
@@ -167,4 +168,10 @@ class SimpleForm extends React.Component {
   }
 }
 
-ReactDOM.render(<SimpleForm />, document.getElementById('root'));
+const MyApp = () => {
+  return (
+    <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/e76ce085-25ba-4f95-ade1-47ddb66f4e69"></iframe>
+  )
+}
+
+ReactDOM.render(<ChatBotAPI />, document.getElementById('root'));
